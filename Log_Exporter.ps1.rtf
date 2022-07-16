@@ -1,0 +1,169 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 $API_KEY \'a0 \'a0 \'a0= "f8ac1bd3eaaa4981a5b0771c705d81ed"\
+$LOGFILE_NAME = "failed_rdp.log"\
+$LOGFILE_PATH = "C:\\ProgramData\\$($LOGFILE_NAME)"\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 $XMLFilter = @'\
+<QueryList>\
+\'a0 \'a0<Query Id="0" Path="Security">\
+\'a0 \'a0 \'a0 \'a0 \'a0<Select Path="Security">\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 *[System[(EventID='4625')]]\
+\'a0 \'a0 \'a0 \'a0 \'a0 </Select>\
+\'a0 \'a0 </Query>\
+</QueryList>\
+'@\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 Function write-Sample-Log() \{\
+\'a0 \'a0 "latitude:47.91542,longitude:-120.60306,destinationhost:samplehost,username:fakeuser,sourcehost:24.16.97.222,state:Washington,country:United States,label:United States - 24.16.97.222,timestamp:2021-10-26 03:28:29" | Out-File $LOGFILE_PATH -Append -Encoding utf8\
+\'a0 \'a0 "latitude:-22.90906,longitude:-47.06455,destinationhost:samplehost,username:lnwbaq,sourcehost:20.195.228.49,state:Sao Paulo,country:Brazil,label:Brazil - 20.195.228.49,timestamp:2021-10-26 05:46:20" | Out-File $LOGFILE_PATH -Append -Encoding utf8\
+\'a0 \'a0 "latitude:52.37022,longitude:4.89517,destinationhost:samplehost,username:CSNYDER,sourcehost:89.248.165.74,state:North Holland,country:Netherlands,label:Netherlands - 89.248.165.74,timestamp:2021-10-26 06:12:56" | Out-File $LOGFILE_PATH -Append -Encoding utf8\
+\'a0 \'a0 "latitude:40.71455,longitude:-74.00714,destinationhost:samplehost,username:ADMINISTRATOR,sourcehost:72.45.247.218,state:New York,country:United States,label:United States - 72.45.247.218,timestamp:2021-10-26 10:44:07" | Out-File $LOGFILE_PATH -Append -Encoding utf8\
+\'a0 \'a0 "latitude:33.99762,longitude:-6.84737,destinationhost:samplehost,username:AZUREUSER,sourcehost:102.50.242.216,state:Rabat-Sal\'e9-K\'e9nitra,country:Morocco,label:Morocco - 102.50.242.216,timestamp:2021-10-26 11:03:13" | Out-File $LOGFILE_PATH -Append -Encoding utf8\
+\'a0 \'a0 "latitude:-5.32558,longitude:100.28595,destinationhost:samplehost,username:Test,sourcehost:42.1.62.34,state:Penang,country:Malaysia,label:Malaysia - 42.1.62.34,timestamp:2021-10-26 11:04:45" | Out-File $LOGFILE_PATH -Append -Encoding utf8\
+\'a0 \'a0 "latitude:41.05722,longitude:28.84926,destinationhost:samplehost,username:AZUREUSER,sourcehost:176.235.196.111,state:Istanbul,country:Turkey,label:Turkey - 176.235.196.111,timestamp:2021-10-26 11:50:47" | Out-File $LOGFILE_PATH -Append -Encoding utf8\
+\'a0 \'a0 "latitude:55.87925,longitude:37.54691,destinationhost:samplehost,username:Test,sourcehost:87.251.67.98,state:null,country:Russia,label:Russia - 87.251.67.98,timestamp:2021-10-26 12:13:45" | Out-File $LOGFILE_PATH -Append -Encoding utf8\
+\'a0 \'a0 "latitude:52.37018,longitude:4.87324,destinationhost:samplehost,username:AZUREUSER,sourcehost:20.86.161.127,state:North Holland,country:Netherlands,label:Netherlands - 20.86.161.127,timestamp:2021-10-26 12:33:46" | Out-File $LOGFILE_PATH -Append -Encoding utf8\
+\'a0 \'a0 "latitude:17.49163,longitude:-88.18704,destinationhost:samplehost,username:Test,sourcehost:45.227.254.8,state:null,country:Belize,label:Belize - 45.227.254.8,timestamp:2021-10-26 13:13:25" | Out-File $LOGFILE_PATH -Append -Encoding utf8\
+\'a0 \'a0 "latitude:-55.88802,longitude:37.65136,destinationhost:samplehost,username:Test,sourcehost:94.232.47.130,state:Central Federal District,country:Russia,label:Russia - 94.232.47.130,timestamp:2021-10-26 14:25:33" | Out-File $LOGFILE_PATH -Append -Encoding utf8\
+\}\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 if ((Test-Path $LOGFILE_PATH) -eq $false) \{\
+\'a0 \'a0 New-Item -ItemType File -Path $LOGFILE_PATH\
+\'a0 \'a0 write-Sample-Log\
+\}\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 while ($true)\
+\{\
+\'a0 \'a0\
+\'a0 \'a0 Start-Sleep -Seconds 1\
+\'a0 \'a0\
+\'a0 \'a0 $events = Get-WinEvent -FilterXml $XMLFilter -ErrorAction SilentlyContinue\
+\'a0 \'a0 if ($Error) \{\
+\'a0 \'a0 \'a0 \'a0\
+\'a0 \'a0 \}\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0\
+\'a0 \'a0 foreach ($event in $events) \{\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0\
+\'a0 \'a0 \'a0 \'a0 if ($event.properties[19].Value.Length -ge 5) \{\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $timestamp = $event.TimeCreated\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $year = $event.TimeCreated.Year\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $month = $event.TimeCreated.Month\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 if ("$($event.TimeCreated.Month)".Length -eq 1) \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $month = "0$($event.TimeCreated.Month)"\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \}\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $day = $event.TimeCreated.Day\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 if ("$($event.TimeCreated.Day)".Length -eq 1) \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $day = "0$($event.TimeCreated.Day)"\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $hour = $event.TimeCreated.Hour\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 if ("$($event.TimeCreated.Hour)".Length -eq 1) \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $hour = "0$($event.TimeCreated.Hour)"\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \}\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $minute = $event.TimeCreated.Minute\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 if ("$($event.TimeCreated.Minute)".Length -eq 1) \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $minute = "0$($event.TimeCreated.Minute)"\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \}\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $second = $event.TimeCreated.Second\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 if ("$($event.TimeCreated.Second)".Length -eq 1) \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $second = "0$($event.TimeCreated.Second)"\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \}\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $timestamp = "$($year)-$($month)-$($day) $($hour):$($minute):$($second)"\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $eventId = $event.Id\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $destinationHost = $event.MachineName\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $username = $event.properties[5].Value\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $sourceHost = $event.properties[11].Value\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $sourceIp = $event.properties[19].Value\
+\'a0 \'a0 \'a0 \'a0\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $log_contents = Get-Content -Path $LOGFILE_PATH\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 if (-Not ($log_contents -match "$($timestamp)") -or ($log_contents.Length -eq 0)) \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 Start-Sleep -Seconds 1\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $API_ENDPOINT = "https://api.ipgeolocation.io/ipgeo?apiKey=$($API_KEY)&ip=$($sourceIp)"\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $response = Invoke-WebRequest -UseBasicParsing -Uri $API_ENDPOINT\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $responseData = $response.Content | ConvertFrom-Json\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $latitude = $responseData.latitude\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $longitude = $responseData.longitude\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $state_prov = $responseData.state_prov\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 if ($state_prov -eq "") \{ $state_prov = "null" \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $country = $responseData.country_name\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 if ($country -eq "") \{$country -eq "null"\}\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 "latitude:$($latitude),longitude:$($longitude),destinationhost:$($destinationHost),username:$($username),sourcehost:$($sourceIp),state:$($state_prov), country:$($country),label:$($country) - $($sourceIp),timestamp:$($timestamp)" | Out-File $LOGFILE_PATH -Append -Encoding utf8\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 Write-Host -BackgroundColor Black -ForegroundColor Magenta "latitude:$($latitude),longitude:$($longitude),destinationhost:$($destinationHost),username:$($username),sourcehost:$($sourceIp),state:$($state_prov),label:$($country) - $($sourceIp),timestamp:$($timestamp)"\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 else \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \}\
+\'a0 \'a0 \'a0 \'a0 \}\
+\'a0 \'a0 \}\
+\}}
