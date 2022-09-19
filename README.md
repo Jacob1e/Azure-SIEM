@@ -20,5 +20,11 @@
 
 <p align="center">
 <img src="Incoming attacks.png" height="85%" width="85%" alt="Incoming Attacks"/>
+
+<h2>Map of incoming attacks after 24 hours<h2>
+
+<p align="center">
+<img src="attacksmap.png" height="85%" width="85%" alt="attacks map"/>
+
 </p>
 
