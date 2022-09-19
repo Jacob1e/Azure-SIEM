@@ -19,6 +19,6 @@
 <h2>Attacks coming in; Custom logs being output with geodata</h2>
 
 <p align="center">
-<img src="https://i.imgur.com/a/RyZkGIa.png" height="85%" width="85%" alt="Incoming Attacks"/>
+<img src="Incoming attacks.png" height="85%" width="85%" alt="Incoming Attacks"/>
 </p>
 
