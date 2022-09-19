@@ -3,7 +3,7 @@
 
 
 <h2>Description</h2>
-<b>The Powershell script is used to for parsing out Windows Event Log information for failed RDP attacks using a third party API to collect geographic information about attacker locations. I logged thousands of failed RDP brute force attacks from around the world and monitored them using Azure Sentinel.
+<b>The Powershell script is used to for parsing out Windows Event Log information for failed RDP attacks using a third party API to collect geographic information about attacker locations. I logged thousands of failed RDP brute force attacks attempting to connect to my VM from around the world and monitored them using Azure Sentinel.
 </b>
 
 
