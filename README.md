@@ -1,20 +1,26 @@
-<h1>SIEM for monitoring failed RDP attacks</h1>
+# Failed RDP Login Tracking Script 🖥️ 🔒
 
+This PowerShell script tracks failed Remote Desktop Protocol (RDP) login attempts and logs them with IP geolocation information. The script uses the `Get-WinEvent` cmdlet to filter events with an Event ID of 4625 from the Windows Security event log, then extracts relevant information such as the username and source IP address. It then calls the IP Geolocation API to determine the geolocation information for the source IP address, and logs the information to a file.
 
+## Features ✨
 
-<h2>Description</h2>
-<b>The Powershell script is used to for parsing out Windows Event Log information for failed RDP attacks using a third party API to collect geographic information about attacker locations. I logged thousands of failed RDP brute force attacks attempting to connect to my VM from around the world and monitored them using Azure Sentinel.
-</b>
+- Tracks failed RDP login attempts ❌
+- Logs IP geolocation information for each attempt 🌎
+- Uses IP Geolocation API to determine country, state, and latitude/longitude coordinates 🗺️
+- Logs to a file for easy analysis and reporting 📄
 
+## Prerequisites 📋
 
+- PowerShell version 4.0 or later 💻
+- An API key for the IP Geolocation API (available from https://ipgeolocation.io/) 🔑
 
-<h2>Languages Used</h2>
+## Usage 🚀
 
-- <b>PowerShell:</b> Extract RDP failed logon logs from Windows Event Viewer 
-
-<h2>Utilities Used</h2>
-
-- <b>ipgeolocation.io:</b> IP Address to Geolocation API
+1. Clone this repository or download the script.
+2. Open PowerShell and navigate to the directory where the script is located.
+3. Set the `$API_KEY` variable to your IP Geolocation API key.
+4. Run the script using `.\failed_rdp.ps1`.
+5. The script will start monitoring failed RDP login attempts and logging IP geolocation information to a file located at `C:\ProgramData\failed_rdp.log`.
 
 <h2>Attacks coming in; Custom logs output with geodata</h2>
 
@@ -28,3 +34,7 @@
 
 </p>
 
+
+## License 📝
+
+[MIT](https://choosealicense.com/licenses/mit/)
