@@ -19,7 +19,7 @@ This PowerShell script tracks failed Remote Desktop Protocol (RDP) login attempt
 1. Clone this repository or download the script.
 2. Open PowerShell and navigate to the directory where the script is located.
 3. Set the `$API_KEY` variable to your IP Geolocation API key.
-4. Run the script using `.\failed_rdp.ps1`.
+4. Run the script using `.\Security_Log_Exporter.ps1`.
 5. The script will start monitoring failed RDP login attempts and logging IP geolocation information to a file located at `C:\ProgramData\failed_rdp.log`.
 
 <h2>Attacks coming in; Custom logs output with geodata</h2>
